@@ -1,0 +1,39 @@
+<!-- let a=prompt("what is your age?")  // prompt har cheez ko string consider krta chayy koi number hi ho
+// prompt ap s koi swal krta h or ap koi jvan enter krty ho
+// lekin alert ap ko btata h, koi bhi cheez ap enter nhi krty, except for clicking
+// on OK button
+
+
+console.log(typeof a)  //string -->
+
+<!-- to convert string to number:
+ let str="123"
+str=Number.parsInt(str)
+console.log(typeof str)  //number
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=prompt("what is your age?")  
+        a=Number. parseInt(a)
+        if(a<5){
+            alert("you are eligible")
+        }
+        else if(a>=5 && a<18){
+            alert("you are lessly eligible")
+        }
+        else {
+            alert("you are  eligible")
+        }
+
+    </script>
+</body>
+</html>

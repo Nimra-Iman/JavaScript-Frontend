@@ -1,0 +1,84 @@
+<!-- direct as well as deeply nested elements are children -->
+<!-- // child nodes are basically direct children means direct children ko child nodes bola jata 
+// h; body is child node of html because body is direct children of html
+
+// descendent nodes (all direct childrens , nested elements and so on)
+
+// how to access first child
+console.log(document.body.firstChild) 
+
+console.log(document.body.lastChild)
+console.log(document.body.childNodes) //list of all childs
+
+
+// following is alwayg true
+document.childNodes[0]=== document.firstChild
+document.childNodes[document.childNodes.length-1]=== document.lastChild -->
+
+
+<!--    *********************  EXAMPLE  ******************* -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>
+    </P>
+    <script>
+        console.log(document.body.firstChild) //text (because body and p k drmian 
+        // jo kafi ziada space h vo basically textnode ki space h)
+
+ // is problem s bachny k liye hm esy likhy gy(document.body.firstElementChild), is s answer
+ // p ay ga chahy body and p k drmian kitni hi lines khali hu
+
+  // jab hm document.body.firstChild likhty hn to is ka matlab hota h k hmy kisi bhi trah 
+  // ka childnode mil skta h phir chahy vo koi comment node ho ya text node
+  //lekin document.body.firstElementChild likhny s sirf element hi mily ga
+  //firstElementChild gives only element nodes, excluding any non-element nodes like
+  // text nodes or comments.
+
+    </script>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body><div>
+
+    </div>
+
+    <P>
+    </P>
+    <script> //(write all this in a saperate .js file and give link of that file here
+    // to get correct answer)
+        // console.log(document.body.firstChild) //div 
+        // console.log(document.body.lastChild) //(script)
+        // console.log(document.body.Childnodes) //list of all childs 
+    
+    </script>
+</body>
+
+</html>
+
+
+<!-- childnodes s jo hmy saary childs ki list milti h vo basically array nhi hota , 
+vo nodelist hota h or us pr hm array k functions perform nhi kr skty, is liye hm
+ usy phly array m convert krty hn ; like below -->
+<!-- let arr=Array.from(document.body.childnodes) -->
+
+
+
+

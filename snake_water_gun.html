@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    //  gun snake ko urati h   (gun wins)
+    // water gun ko dooba deta h (water wins)
+    // snake pani pee leta h (snake wins)
+
+
+    // snake snake, water water, gun gun 
+    // snake water, water snake, snake gun , gun snake
+    // gun water, water gun
+let array=["snake", "water", "gun"]
+let s="snake"
+let w="water"
+let g="gun"
+let u_increment=0
+let c_increment=0
+let user
+let computer
+
+for(let i=0;i<5;i++){
+let rand=Math.floor(Math.random() * array.length)
+let random_letter=array[rand] 
+console.log(random_letter)
+let a=prompt("enter snake, or water or gun")
+if(a=="snake" && random_letter=="gun" ){
+    alert("gun wins")
+        if(a!=g){
+            computer=c_increment++
+        }
+        else{
+            user=u_increment++
+        }
+}
+else if(random_letter=="snake" && a=="gun"){
+    (  "gun wins")
+    if(a!=g){
+            computer=c_increment++
+        }
+        else{
+            user=u_increment++
+        }
+}
+else if(a=="water" && random_letter=="gun" ){
+    alert("water  wins")
+    if(a!=w){
+            computer=c_increment++
+        }
+        else{
+            user=u_increment++
+        }
+}
+else if(  random_letter=="water" && a=="gun"){
+    alert("water wins ")
+    if(a!=w){
+            computer=c_increment++
+        }
+        else{
+            user=u_increment++
+        }
+}
+else if(a=="snake" && random_letter=="water"){
+    alert("snake wins")
+    if(a!=s){
+            computer=c_increment++
+        }
+        else{
+            user=u_increment++
+        }
+}
+else if(  random_letter=="snake" && a=="water"){
+    alert("snake wins ")
+    if(a!=s){
+            computer=c_increment++
+        }
+        else{
+            user=u_increment++
+        }
+}
+else if(a=="snake" && random_letter=="snake" || a=="water" && random_letter=="water" || a=="gun" && random_letter=="gun"){
+    alert("wasted attempt ")
+}
+}
+if(user>computer){
+    alert("congratulations you win")
+}
+else{
+    alert("oops! you loss, computer is winner now")
+}
+//if user input and answer are same then check++ ho jay or vo value ek "user" varaible m 
+// store ho jay 
+// if computer and answer are same to c++ ho jay or vo value ek comp m store ho jay
+// if(comp>user) the user wins and vice virsa
+ </script>
+</body>
+</html>

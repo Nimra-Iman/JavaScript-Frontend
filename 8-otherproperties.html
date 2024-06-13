@@ -1,0 +1,67 @@
+<!-- //     do this on console to understand better
+// console.log(shows the element DOM tree)
+//console.dir(shows element as an object with its properties) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>this is span</span>
+    <div>this is div</div>
+    <div id="hide" hidden >this is data in hidden</div>
+    <!-- this is comment node -->
+    <script>
+                              //nodename and tagname
+//      tagName is specific to Element nodes and returns the tag name of an HTML
+//      element in uppercase.
+//      nodeName is more generic and applicable to all types of nodes in the DOM.
+//      For Element nodes, it usually returns the same value as tagName, but for other node
+//      types, it might return different values like '#text', '#comment', etc., indicating 
+//      their node types.
+        console.log(document.body.firstChild.nodeName) //#TEXT
+        console.log(document.body.firstElementChild.nodeName) //SPAN
+        let t=(document.body.firstElementChild.nodeName)
+        console.log(typeof t) //string
+        let x=(document.body.firstElementChild) //<span>this is span</span>
+        console.log(typeof x) //object
+
+        console.log(document.body.firstElementChild.tagName) //SPAN
+
+
+
+        console.log(document.body.firstChild.tagName) //undefined
+        console.log(document.body.firstElementChild.tagName) //SPAN
+        console.log(document.body.firstChild.nodeName) //#TEXT
+        console.log(document.body.firstElementChild.nodeName) //SPAN
+
+
+        // innerHTML(only inner mvad) and outerHTML(innerHTML + element itself)
+        console.log(document.body.firstElementChild.innerHTML) //this is span
+        console.log(document.body.firstElementChild.outerHTML) //<span>this is span</span>
+
+        // innerhtml is valid only for element nodes, for other node types, we use
+        // .data and .nodevalue
+        
+
+        // text-content
+        console.log(document.body.textContent) //body ka sara text, yani agar kisi website
+        // ka saara text copy krna ho to y chla kr saara text copy kr lo , .js ki file 
+        // alag likho gy to .js vala data print nhi ho ga or isk saath saath comments etc
+        // or kuch ajeeb show nhi ho ga just text show ho ga
+
+
+
+        // hidden(agar kisi k agy m hidden likh du gi to output m vo text show nhi ho ga)
+        console.log(document.body)// yha saamny output m hidden vala data show nhi ho rha
+        // but if m console m ya yhi pr hi us data ko pkru or hidden=false kr du to vo hidden vala
+        // data bhi screen pr show hony lag jay ga like this:
+        let h=(document.getElementById("hide")) 
+        h.hidden=false
+
+    </script>
+</body>
+</html>
